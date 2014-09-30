@@ -16,7 +16,7 @@ interface ICommentForm {
     public function setAttributes($data);
     
     public function getModel();
-    public function validate();
+    public function validate($attributes=null, $clearErrors=true);
     public function save();
     public function saveSure();
 }

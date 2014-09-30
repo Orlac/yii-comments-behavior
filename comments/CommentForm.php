@@ -44,9 +44,9 @@ class CommentForm extends \CFormModel implements ICommentForm{
         $this->model=$model;
     }
     
-    public function setAttributes($values) {
-        parent::setAttributes($values);
-        $this->model->setAttributes($this->getAttributes());
+    public function setAttributes($values,$safeOnly=true) {
+        parent::setAttributes($values, $safeOnly);
+        $this->model->setAttributes($this->getAttributes(), $safeOnly);
         //\Yii::app()->getUser()->getId();
     }
     
@@ -56,7 +56,7 @@ class CommentForm extends \CFormModel implements ICommentForm{
     public function getModel(){
         return $this->model;
     }
-    public function validate(){
+    public function validate($attributes=null, $clearErrors=true){
         if(parent::validate()){
             //$this->model->setAttributes($this->getAttributes());
             return $this->model->validate();

@@ -15,5 +15,8 @@ interface ICommentModel {
     //put your code here
     
     public function setCommentedModel($model);
+    public function getUserName();
+    //public function getFormatText();
+    public function getDeleteUrl();
     //public function setCommentedUser( \CUserIdentity $user);
 }

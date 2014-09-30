@@ -22,7 +22,7 @@ class Behavior extends \CActiveRecordBehavior{
         'class'=>'\comments\CommentList'
     );
     public $commentForm=array(
-        'class'=>'\comments\commentForm'
+        'class'=>'\comments\CommentForm'
     );
     
     /**

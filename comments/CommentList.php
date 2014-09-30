@@ -17,7 +17,7 @@ namespace comments;
 class CommentList extends \CFormModel implements ICommentList{
     //put your code here
     
-    public $model;
+    private $model;
 
 
     /**
@@ -27,8 +27,8 @@ class CommentList extends \CFormModel implements ICommentList{
         return $this->model->search();
     }
     
-    public function setAttributes($data){
-        $this->model->setAttributes($data);
+    public function setAttributes($values,$safeOnly=true){
+        $this->model->setAttributes($values, $safeOnly);
     }
     
     public function setModel(\CActiveRecord $model){
